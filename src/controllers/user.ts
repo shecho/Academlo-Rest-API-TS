@@ -1,10 +1,10 @@
 import {Request, Response} from 'express';
 import User from '../models/user';
 
-const getUsers = (req, res) => {
-    User.find().then( results => {
-        res.json(results);
-    });
+const getUsers = async(req :Request, res :Response) => {
+    
+     let  results = User.find()
+     res.json(results);
 }
 
 export default {
